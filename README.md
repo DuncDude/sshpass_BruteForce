@@ -11,6 +11,6 @@ list=$3
 EXAMPLE
 git clone https://github.com/DuncDude/sshpass_BruteForce.git
 cd sshpass_BruteForce
-chmod 755 sshpass_BruteForce
+chmod 755 SHBF
 ./sshpass_BruteForce root 192.168.1.3 passwordlist.txt
 
